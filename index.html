@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Layyah - Official Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        .site-header {
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Perfect Logo Size & Styling */
+        .logo-img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: #ffffff;
+            padding: 4px;
+        }
+
+        .header-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .header-text p {
+            font-size: 0.95rem;
+            color: #cbd5e0;
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Blog Cards */
+        .blog-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .category-badge {
+            background-color: #e2e8f0;
+            color: #2b6cb0;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .blog-card h2 {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #2d3748;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 12px;
+        }
+
+        .post-text {
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        /* Buttons */
+        .like-btn {
+            background-color: #2b6cb0;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .like-btn:hover {
+            background-color: #2c5282;
+        }
+
+        /* Comment Section */
+        .comment-section {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .comment-section h3 {
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        #commentForm input, #commentForm textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .submit-btn {
+            background-color: #38a169;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background-color: #2f855a;
+        }
+
+        .recent-comments {
+            margin-top: 20px;
+        }
+
+        .recent-comments ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .recent-comments li {
+            background: #f7fafc;
+            padding: 10px;
+            border-left: 4px solid #38a169;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a202c;
+            color: #a0aec0;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- University Logo Image File -->
+            <div class="logo-container">
+                <img src="logo.png" alt="University of Layyah Logo" class="logo-img">
+            </div>
+            
+            <div class="header-text">
+                <h1>University of Layyah</h1>
+                <p>Official Student & Campus Insights Blog</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-container">
+
+        <!-- Blog Post 1 -->
+        <article class="blog-card">
+            <span class="category-badge">CAMPUS LIFE</span>
+            <h2>Welcome to University of Layyah Official Blog</h2>
+            <p class="post-meta">Published by Admin | October 2026</p>
+            <p class="post-text">
+                Welcome to our revamped digital space! Explore recent announcements, academic news, and campus department events all in one place.
+            </p>
+            <button class="like-btn" onclick="increaseLike(this)">
+                ❤️ Like (<span class="like-count">0</span>)
+            </button>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="blog-card">
+            <span class="category-badge">EVENTS</span>
+            <h2>Annual Sports & Cultural Gala 2026</h2>
+            <p class="post-meta">Published by Sports Society | October 2026</p>
+            <p class="post-text">
+                Get ready for an action-packed week! Registrations for cricket, football, athletics, and cultural events are now open. Showcase your talents.
+            </p>
+            <button class="like-btn" onclick="increaseLike(this)">
+                ❤️ Like (<span class="like-count">0</span>)
+            </button>
+        </article>
+
+        <!-- Comments Section -->
+        <section class="comment-section">
+            <h3>Join the Discussion</h3>
+            <form id="commentForm" onsubmit="addComment(event)">
+                <input type="email" id="userEmail" placeholder="Your email address" required>
+                <textarea id="userComment" rows="4" placeholder="Share your thoughts..." required></textarea>
+                <button type="submit" class="submit-btn">Post Comment</button>
+            </form>
+
+            <div class="recent-comments">
+                <h4>Recent Comments</h4>
+                <ul id="commentsList">
+                    <!-- Dynamic comments will appear here -->
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p>&copy; 2026 University of Layyah. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        // Like Button Functionality
+        function increaseLike(button) {
+            let countSpan = button.querySelector('.like-count');
+            let currentLikes = parseInt(countSpan.innerText);
+            countSpan.innerText = currentLikes + 1;
+        }
+
+        // Add Comment Functionality
+        function addComment(event) {
+            event.preventDefault();
+            
+            let email = document.getElementById('userEmail').value;
+            let text = document.getElementById('userComment').value;
+            let list = document.getElementById('commentsList');
+
+            let newComment = document.createElement('li');
+            newComment.innerHTML = `<strong>${email}:</strong> ${text}`;
+            
+            list.appendChild(newComment);
+
+            // Reset Form fields after posting
+            document.getElementById('commentForm').reset();
+        }
+    </script>
+</body>
+</html>
